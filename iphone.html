@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>iPhone - Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="logo">
+                <a href="index.html">Store</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="mac.html">Mac</a></li>
+                <li><a href="ipad.html">iPad</a></li>
+                <li><a href="iphone.html">iPhone</a></li>
+                <li><a href="watch.html">Watch</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://www.apple.com/media/us/iphone-13/2021/video/2021/iphone-13-2021-tpl-hero/large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay-text">
+            <h1>iPhone</h1>
+            <p>Experience the future.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="product-item">
+            <img src="https://via.placeholder.com/300" alt="iPhone 13">
+            <h3>iPhone 13</h3>
+            <p>Most advanced iPhone ever.</p>
+            <a href="iphone.html" class="cta-btn">Learn More</a>
+        </div>
+        <div class="product-item">
+            <img src="https://via.placeholder.com/300" alt="iPhone 12">
+            <h3>iPhone 12</h3>
+            <p>5G speed and performance.</p>
+            <a href="iphone.html" class="cta-btn">Learn More</a>
+        </div>
+        <div class="product-item">
+            <img src="https://via.placeholder.com/300" alt="iPhone SE">
+            <h3>iPhone SE</h3>
+            <p>Power in a compact form.</p>
+            <a href="iphone.html" class="cta-btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Find a Store</a>
+            <a href="#">Genius Bar</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms of Use</a>
+        </div>
+        <div class="legal">
+            <p>&copy; 2024 Online Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+</body>
+</html>

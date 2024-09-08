@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="logo">
+                <a href="index.html">Store</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="mac.html">Mac</a></li>
+                <li><a href="ipad.html">iPad</a></li>
+                <li><a href="iphone.html">iPhone</a></li>
+                <li><a href="watch.html">Watch</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://www.apple.com/media/us/macbook-air-2020/video/2020/macbook-air-2020-tpl-hero/large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay-text">
+            <h1>Welcome to the Online Store</h1>
+            <p>Find the latest products and accessories for your everyday needs.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="product-item">
+            <img src="https://via.placeholder.com/300" alt="MacBook Pro">
+            <h3>MacBook Pro</h3>
+            <p>Powerful and portable.</p>
+            <a href="mac.html" class="cta-btn">Shop Now</a>
+        </div>
+        <div class="product-item">
+            <img src="https://via.placeholder.com/300" alt="iPad Pro">
+            <h3>iPad Pro</h3>
+            <p>Creativity and power combined.</p>
+            <a href="ipad.html" class="cta-btn">Shop Now</a>
+        </div>
+        <div class="product-item">
+            <img src="https://via.placeholder.com/300" alt="iPhone">
+            <h3>iPhone 14</h3>
+            <p>Experience the future.</p>
+            <a href="iphone.html" class="cta-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Find a Store</a>
+            <a href="#">Genius Bar</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms of Use</a>
+        </div>
+        <div class="legal">
+            <p>&copy; 2024 Online Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+</body>
+</html>

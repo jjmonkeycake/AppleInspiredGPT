@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Support - Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay-text {
+            position: absolute;
+            color: white;
+            text-align: center;
+        }
+
+        .overlay-text h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .overlay-text p {
+            font-size: 1.25rem;
+        }
+
+        /* Help Categories Section */
+        .help-categories {
+            padding: 50px 20px;
+            background-color: #f5f5f5;
+        }
+
+        .categories-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category {
+            background-color: white;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .category p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            padding: 10px 20px;
+            background-color: #0070c9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #005da0;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .faq-container {
+            margin-top: 20px;
+        }
+
+        .faq-item {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #0070c9;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding-top: 10px;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .faq-answer.active {
+            max-height: 200px;
+        }
+
+        /* Help Form Section */
+        .help-form {
+            padding: 50px 20px;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container label {
+            text-align: left;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #0070c9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #005da0;
+        }
+
+        /* Live Chat Section */
+        .live-chat {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .chat-widget {
+            padding: 30px;
+            background-color: #0070c9;
+            color: white;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .chat-btn {
+            padding: 10px 20px;
+            background-color: white;
+            color: #0070c9;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .chat-btn:hover {
+            background-color: #005da0;
+            color: white;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .categories-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .category {
+                width: 80%;
+            }
+
+            .faq-answer {
+                max-height: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="logo">
+                <a href="index.html">Store</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="mac.html">Mac</a></li>
+                <li><a href="ipad.html">iPad</a></li>
+                <li><a href="iphone.html">iPhone</a></li>
+                <li><a href="watch.html">Watch</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://www.apple.com/media/us/support/2021/video/2021/support-tpl-hero/large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay-text">
+            <h1>Support</h1>
+            <p>We're here to help you with any issues.</p>
+        </div>
+    </section>
+
+    <!-- Help Categories -->
+    <section class="help-categories">
+        <h2>How can we assist you today?</h2>
+        <div class="categories-container">
+            <div class="category">
+                <h3>Device Setup</h3>
+                <p>Guides for setting up your new devices.</p>
+                <a href="#" class="cta-btn">Learn More</a>
+            </div>
+            <div class="category">
+                <h3>Repairs & Services</h3>
+                <p>Get support for repairs, replacements, or warranty.</p>
+                <a href="#" class="cta-btn">Learn More</a>
+            </div>
+            <div class="category">
+                <h3>Account Management</h3>
+                <p>Manage your Apple ID and other services.</p>
+                <a href="#" class="cta-btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">How do I reset my password?</button>
+                <div class="faq-answer">
+                    <p>You can reset your password by going to the Apple ID website and clicking on "Forgot Password".</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Where can I check the warranty status of my device?</button>
+                <div class="faq-answer">
+                    <p>You can check your warranty status on the Apple Support website under "Check Coverage".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Form -->
+    <section class="help-form">
+        <h2>Need More Help?</h2>
+        <div class="form-container">
+            <form action="submit_help_form.php" method="post">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">How can we assist you?</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Live Chat Section -->
+    <section class="live-chat">
+        <h2>Talk to a Specialist</h2>
+        <div class="chat-widget">
+            <p>Need assistance? Start a live chat with our support team now.</p>
+            <a href="#" class="chat-btn">Start Chat</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Online Store. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach((question) => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
